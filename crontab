@@ -1,0 +1,17 @@
+#!/usr/bin/php
+<?php
+
+include __DIR__ . '/vendor/autoload.php';
+
+use Cron\Cron;
+
+$command = file_get_contents('./cron_job.job');
+$crontab = <<<EOF
+$command
+EOF;
+
+
+$tasks = explode("\n", $crontab);
+$cron = new Cron( (array_filter($tasks)));
+
+$cron->start();

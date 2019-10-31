@@ -1,0 +1,2 @@
+*/10|*|*|*|*|*|php|/usr/local/lenovosrv/php/bin/php /usr/local/lenovosrv/nginx/html/admin2/yii generate-mclaim-report
+*/5|*|*|*|*|*|php|/var/www/html/loocode-example/swoole-crontab/example.php
